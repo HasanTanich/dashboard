@@ -11,7 +11,6 @@ import { useStateContext } from './contexts/ContextProvider';
 const App = () => {
 
     const { activeMenu, themeSettings, setThemeSettings, currentColor, currentMode } = useStateContext();
-    console.log(currentColor);
     return (
         <div className={currentMode === 'Dark' ? 'dark' : ''}>
             <BrowserRouter>

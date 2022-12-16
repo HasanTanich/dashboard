@@ -22,8 +22,6 @@ export const ContextProvider = ({ children }) => {
     }
 
     useEffect(() => {
-        console.log(currentColor);
-        console.log(currentMode);
         let color = localStorage.getItem('currentColor');
         let mode = localStorage.getItem('mode');
         if (color && mode) {

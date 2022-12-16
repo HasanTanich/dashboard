@@ -8,7 +8,6 @@ import { useStateContext } from '../contexts/ContextProvider';
 
 const ThemeSettings = () => {
     const { setThemeSettings, currentColor, setCurrentColor, setCurrentMode, currentMode } = useStateContext();
-    console.log(currentColor);
     return (
         <div className="bg-half-transparent w-screen fixed nav-item top-0 right-0">
             <div className="float-right h-screen dark:text-gray-200 bg-white dark:[#484b52] w-400">
