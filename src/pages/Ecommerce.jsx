@@ -104,4 +104,4 @@ const Ecommerce = () => {
     )
 }
 
-export default Ecommerce
+export default Ecommerce;

@@ -21,4 +21,4 @@ const Stacked = ({ width, height }) => {
     )
 }
 
-export default Stacked
+export default Stacked;

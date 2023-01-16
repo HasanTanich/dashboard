@@ -6,4 +6,4 @@ const ChartsHeader = () => {
     )
 }
 
-export default ChartsHeader
+export default ChartsHeader;

@@ -11,6 +11,7 @@ import { useStateContext } from './contexts/ContextProvider';
 const App = () => {
 
     const { activeMenu, themeSettings, setThemeSettings, currentColor, currentMode } = useStateContext();
+
     return (
         <div className={currentMode === 'Dark' ? 'dark' : ''}>
             <BrowserRouter>
@@ -40,8 +41,8 @@ const App = () => {
                             <Navbar />
                         </div>
 
+                        {themeSettings && <ThemeSettings />}
                         <div>
-                            {themeSettings && <ThemeSettings />}
                             <Routes>
                                 {/* Dashboard */}
                                 <Route path='/' element={<Ecommerce />} />
@@ -76,4 +77,4 @@ const App = () => {
     )
 }
 
-export default App
+export default App;

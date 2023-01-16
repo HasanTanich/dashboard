@@ -27,4 +27,4 @@ const Customers = () => {
         </div>)
 }
 
-export default Customers
+export default Customers;

@@ -1,8 +1,10 @@
 import React from 'react'
 
-const Line = () => {
+const Line = (images, step, frameSize, itemWidth, animationDuration, infinite) => {
     return (
-        <div>Line</div>
+        <div className="">
+            
+        </div>
     )
 }
 

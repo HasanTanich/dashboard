@@ -10,7 +10,7 @@ const ThemeSettings = () => {
     const { setThemeSettings, currentColor, setCurrentColor, setCurrentMode, currentMode } = useStateContext();
     return (
         <div className="bg-half-transparent w-screen fixed nav-item top-0 right-0">
-            <div className="float-right h-screen dark:text-gray-200 bg-white dark:[#484b52] w-400">
+            <div className="float-right h-screen dark:text-gray-200 bg-white dark:bg-[#484b52] w-400">
                 <div className="flex justify-between items-center ml-4 p-4">
                     <p className="text-xl font-semibold">Settings</p>
                     <button
@@ -80,4 +80,4 @@ const ThemeSettings = () => {
     )
 }
 
-export default ThemeSettings
+export default ThemeSettings;

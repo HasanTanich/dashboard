@@ -6,7 +6,7 @@ import { RiNotification3Line } from 'react-icons/ri';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
-import avatar from '../data/avatar.jpg';
+import me from '../data/me.jpg';
 import { Cart, Chat, Notification, UserProfile } from '.';
 import { useStateContext } from '../contexts/ContextProvider';
 
@@ -42,48 +42,54 @@ const Navbar = () => {
 
     return (
         <div className='flex justify-between p-2 md:mx-6 relative'>
-
             <NavButton title={'Menu'} customFunc={() => {
                 setActiveMenu((prevActiveMenu) => !prevActiveMenu);
             }} color={currentColor} icon={<AiOutlineMenu />} />
 
-            <div className='flex'>
-                <NavButton title={'Cart'} customFunc={() => handleClick('cart')}
-                    color={currentColor}
-                    icon={<FiShoppingCart />} />
-            </div>
+            <div className="flex gap-5">
 
-            <div className='flex'>
-                <NavButton title={'Chat'} customFunc={() => handleClick('chat')}
-                    dotColor="#03C9D7"
-                    color={currentColor}
-                    icon={<BsChatLeft />} />
-            </div>
-
-            <div className='flex'>
-                <NavButton title={'Notifications'} customFunc={() => handleClick('notification')}
-                    dotColor="#03C9D7"
-                    color={currentColor}
-                    icon={<RiNotification3Line />} />
-            </div>
-
-            <TooltipComponent content='Profile' position="BottomCenter">
-                <div className='flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg' onClick={() => handleClick('userProfile')}>
-                    <img src={avatar} className="rounded-full w-8 h-8 " />
-                    <p>
-                        <span className='text-gray-400 text-14'>Hi, </span> {' '}
-                        <span className='text-gray-400 font-bold ml-1 text-14'>Michael </span>
-                    </p>
-                    <MdKeyboardArrowDown className='text-gray-400 text-14' />
+                <div>
+                    <NavButton title={'Cart'} customFunc={() => handleClick('cart')}
+                        color={currentColor}
+                        icon={<FiShoppingCart />} />
                 </div>
-            </TooltipComponent>
 
-            {isClicked.cart && <Cart />}
-            {isClicked.chat && <Chat />}
-            {isClicked.notification && <Notification />}
-            {isClicked.userProfile && <UserProfile />}
+                <div>
+                    <NavButton title={'Chat'} customFunc={() => handleClick('chat')}
+                        dotColor="#03C9D7"
+                        color={currentColor}
+                        icon={<BsChatLeft />} />
+                </div>
+
+                <div>
+                    <NavButton title={'Notifications'} customFunc={() => handleClick('notification')}
+                        dotColor="rgb(254, 201, 15)"
+                        color={currentColor}
+                        icon={<RiNotification3Line />} />
+                </div>
+
+                <TooltipComponent content='Profile' position="BottomCenter">
+                    <div className='flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg'
+                        onClick={() => handleClick('userProfile')}>
+                        <img
+                            src={me}
+                            alt="user-profile"
+                            className="rounded-full w-8 h-8 " />
+                        <p>
+                            <span className='text-gray-400 text-14'>Hi, </span> {' '}
+                            <span className='text-gray-400 font-bold ml-1 text-14'>Hasan </span>
+                        </p>
+                        <MdKeyboardArrowDown className='text-gray-400 text-14' />
+                    </div>
+                </TooltipComponent>
+
+                {isClicked.cart && <Cart />}
+                {isClicked.chat && <Chat />}
+                {isClicked.notification && <Notification />}
+                {isClicked.userProfile && <UserProfile />}
+            </div>
         </div>
     )
 }
 
-export default Navbar
+export default Navbar;
